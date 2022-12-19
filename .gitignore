@@ -1,0 +1,6 @@
+###############
+#   BACKEND   #
+###############
+
+backend/.env
+backend/.env.example
