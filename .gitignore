@@ -4,3 +4,10 @@
 
 backend/.env
 backend/.env.example
+backend/.idea
+
+### Pycache ###
+*/__pycache__/*
+*/*/__pycache__/*
+*/*/*/__pycache__/*
+*/*/*/*/__pycache__/*

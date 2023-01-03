@@ -4,18 +4,21 @@ services:
     image: postgres:14.2
     ports: 
       - 5432:5432
-    enviroment:
-      POSTGRES_DB: ${DB_NAME}
-      POSTGRES_USER: ${DB_USER}
-      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    env_file: ./backend/.env
+      #      enviroment:
+      #        POSTGRES_DB: ${DB_NAME}
+      #        POSTGRES_USER: ${DB_USER}
+      #        POSTGRES_PASSWORD: ${DB_PASSWORD}
     volumes:
       - db-data:/data/postgres
 
-  web:
-    build:
-      context: ./backend
-      args:
-        REQUIREMENTS_FILE: dev.txt
-    restart: always
-    ports: 8001:8000
+        #  web:
+        #    build:
+        #      context: ./backend
+        #      args:
+        #        REQUIREMENTS_FILE: dev.txt
+        #    restart: always
+        #    ports: 8001:8000
 
+volumes:
+  db-data:
